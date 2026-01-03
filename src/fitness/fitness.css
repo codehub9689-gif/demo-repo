@@ -1,0 +1,507 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #0f1115;
+  color: #f5f7fb;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0f1115;
+  color: inherit;
+}
+
+.fitness-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top left, rgba(70, 110, 255, 0.16), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(255, 90, 110, 0.14), transparent 50%);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 4vw;
+  background: rgba(12, 14, 20, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.brand-name {
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f5f7fb;
+}
+
+.brand-tagline {
+  font-size: 0.85rem;
+  color: rgba(245, 247, 251, 0.6);
+}
+
+.site-header nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.site-header nav button {
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.site-header nav button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.site-header nav button.active {
+  border-color: rgba(88, 122, 255, 0.9);
+  background: rgba(88, 122, 255, 0.2);
+}
+
+.header-cta button,
+button {
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem 1.3rem;
+  background: linear-gradient(135deg, #586bff, #ff5a6e);
+  color: #0f1115;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(255, 90, 110, 0.25);
+}
+
+button.secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f5f7fb;
+  box-shadow: none;
+}
+
+main.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 6vw 5rem;
+  gap: 2.5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.panel {
+  background: rgba(16, 19, 27, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 8, 20, 0.4);
+}
+
+.panel-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.panel-header p {
+  color: rgba(245, 247, 251, 0.7);
+  margin: 0;
+  max-width: 42rem;
+}
+
+.hero {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.hero-copy h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 4vw, 3.4rem);
+  line-height: 1.1;
+}
+
+.hero-copy p {
+  margin: 0 0 1.5rem;
+  color: rgba(245, 247, 251, 0.75);
+  max-width: 32rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-board {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.board-card {
+  background: linear-gradient(160deg, rgba(88, 107, 255, 0.22), rgba(255, 90, 110, 0.18));
+  border-radius: 20px;
+  padding: 1.8rem;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(15, 17, 21, 0.7);
+  font-weight: 600;
+}
+
+.board-card ul {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.board-note {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 1.5rem;
+  font-style: italic;
+  color: rgba(245, 247, 251, 0.85);
+}
+
+.pillars-grid,
+.stories-grid,
+.highlight-grid,
+.values-grid,
+.membership-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.pillars-grid article,
+.stories-grid article,
+.highlight-grid article,
+.values-grid article {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 18px;
+  padding: 1.8rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.pillars-grid article span {
+  color: rgba(245, 247, 251, 0.65);
+  font-size: 0.9rem;
+}
+
+.schedule-preview-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.schedule-preview-grid article {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 18px;
+  padding: 1.6rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.preview-day {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(245, 247, 251, 0.6);
+}
+
+.preview-time,
+.preview-coach {
+  font-size: 0.95rem;
+  color: rgba(245, 247, 251, 0.65);
+}
+
+.schedule-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.schedule-column {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.schedule-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.schedule-column li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.8rem;
+}
+
+.schedule-time {
+  font-weight: 600;
+  color: rgba(88, 122, 255, 0.8);
+}
+
+.schedule-name {
+  font-weight: 600;
+}
+
+.schedule-coach {
+  font-size: 0.9rem;
+  color: rgba(245, 247, 251, 0.6);
+}
+
+.dropin-grid,
+.coach-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.dropin-grid article {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 18px;
+  padding: 1.8rem;
+}
+
+.dropin-grid ul {
+  margin: 1rem 0 0;
+  padding-left: 1.1rem;
+  color: rgba(245, 247, 251, 0.7);
+}
+
+.coach-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 1.8rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.coach-title {
+  color: rgba(245, 247, 251, 0.6);
+  font-size: 0.95rem;
+}
+
+.coach-certifications {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.coach-certifications li {
+  background: rgba(88, 122, 255, 0.16);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.testimonial-carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-carousel > button {
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.testimonial-quote {
+  margin: 0;
+  font-size: 1.15rem;
+  color: rgba(245, 247, 251, 0.85);
+}
+
+.testimonial-name {
+  font-weight: 600;
+}
+
+.testimonial-program {
+  color: rgba(245, 247, 251, 0.6);
+}
+
+.testimonial-dots {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.testimonial-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+}
+
+.testimonial-dots button.active {
+  background: #ff5a6e;
+}
+
+.membership-grid {
+  align-items: stretch;
+}
+
+.membership-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 22px;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.membership-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(88, 122, 255, 0.9);
+}
+
+.membership-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.6rem;
+  color: rgba(245, 247, 251, 0.7);
+}
+
+.membership-cta {
+  justify-self: start;
+}
+
+.faq-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.faq-list article {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 18px;
+  padding: 1.8rem;
+}
+
+.faq-list h3 {
+  margin: 0 0 0.5rem;
+}
+
+.site-footer {
+  padding: 2rem 4vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(12, 14, 20, 0.95);
+  font-size: 0.9rem;
+  color: rgba(245, 247, 251, 0.6);
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .site-header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main.page {
+    padding: 2.5rem 5vw 4rem;
+  }
+
+  .panel {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .testimonial-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-carousel > button {
+    justify-self: center;
+  }
+}
+

@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap");
+
+:root {
+  color: #1c252e;
+  background: #f8f5f2;
+  font-family: "Work Sans", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f8f5f2;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(248, 245, 242, 1));
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1.2rem 3rem;
+}
+
+.shell {
+  width: 100%;
+  max-width: 1080px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 32px;
+  box-shadow: 0 30px 80px rgba(27, 27, 27, 0.1);
+  overflow: hidden;
+}
+
+.page {
+  padding: 0 2.5rem 3rem;
+}
+
+.site-header {
+  padding: 2rem 2.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(28, 37, 46, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.brand-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-tagline {
+  font-size: 0.85rem;
+  color: #6a737a;
+  letter-spacing: 0.18em;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.site-header button {
+  background: none;
+  border: none;
+  font: inherit;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4c5257;
+  cursor: pointer;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.site-header button:hover,
+.site-header button:focus-visible {
+  color: #1c252e;
+  border-color: rgba(28, 37, 46, 0.3);
+}
+
+.site-header button.active {
+  color: #1c252e;
+  border-color: #c79860;
+}
+
+.hero {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  padding: 2.5rem 0 1.5rem;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.3rem, 5vw, 3.4rem);
+  margin: 0 0 1.4rem;
+  letter-spacing: 0.04em;
+}
+
+.hero-copy p {
+  color: #555f68;
+  margin: 0 0 1.8rem;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.cta-row button {
+  padding: 0.7rem 1.8rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.cta-row button.primary {
+  background: #c79860;
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(199, 152, 96, 0.35);
+}
+
+.cta-row button.secondary {
+  background: #f0e1d2;
+  color: #7a5331;
+}
+
+.cta-row button:hover {
+  transform: translateY(-2px);
+}
+
+.cta-row button.primary:hover {
+  background: #b8884f;
+}
+
+.hero-visual {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(28, 37, 46, 0.18);
+  min-height: 320px;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  padding: 1rem 1.3rem;
+  max-width: 240px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 30px rgba(28, 37, 46, 0.12);
+}
+
+.hero-badge h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-badge p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #5d646b;
+}
+
+.panel {
+  margin-top: 3rem;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 28px;
+  padding: 2.4rem;
+  box-shadow: 0 20px 60px rgba(28, 37, 46, 0.08);
+  display: grid;
+  gap: 1.8rem;
+}
+
+.panel-header {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+}
+
+.panel-header p {
+  margin: 0;
+  color: #5c656d;
+  max-width: 52ch;
+}
+
+.menu-grid {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.menu-card {
+  border-radius: 20px;
+  background: #fff9f3;
+  border: 1px solid rgba(199, 152, 96, 0.25);
+  padding: 1.6rem;
+  display: grid;
+  gap: 0.8rem;
+  box-shadow: 0 12px 36px rgba(199, 152, 96, 0.12);
+}
+
+.menu-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+}
+
+.menu-card ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  color: #5d6064;
+}
+
+.highlight-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.3rem;
+}
+
+.highlight-item {
+  background: rgba(28, 37, 46, 0.85);
+  color: #fff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent 65%);
+}
+
+.highlight-item span {
+  position: relative;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.highlight-item h3 {
+  position: relative;
+  margin: 0.6rem 0 0.4rem;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.05em;
+}
+
+.highlight-item p {
+  position: relative;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.gallery-card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 16px 40px rgba(28, 37, 46, 0.12);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-card span {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 0.9rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.events-grid {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.event-card {
+  border-radius: 22px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgba(28, 37, 46, 0.1);
+  display: grid;
+  grid-template-rows: 200px auto;
+}
+
+.event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-card .event-body {
+  padding: 1.6rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.event-body h3 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+}
+
+.event-body span {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c79860;
+}
+
+.event-body p {
+  margin: 0;
+  color: #5a6167;
+}
+
+.reservations {
+  border: 1px solid rgba(28, 37, 46, 0.1);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 249, 243, 0.9), rgba(255, 255, 255, 0.95));
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.reservations form {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.reservations label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #4d5459;
+}
+
+.reservations input,
+.reservations textarea,
+.reservations select {
+  border-radius: 12px;
+  border: 1px solid rgba(28, 37, 46, 0.18);
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+  background: rgba(255, 255, 255, 0.9);
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reservations textarea {
+  min-height: 120px;
+}
+
+.reservations input:focus,
+.reservations textarea:focus,
+.reservations select:focus {
+  outline: none;
+  border-color: #c79860;
+  box-shadow: 0 0 0 3px rgba(199, 152, 96, 0.25);
+}
+
+.reservations button {
+  justify-self: flex-start;
+  padding: 0.8rem 2.4rem;
+  border-radius: 999px;
+  border: none;
+  background: #1c252e;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.reservations button:hover {
+  background: #0f151c;
+  transform: translateY(-2px);
+}
+
+.site-footer {
+  margin: 3rem 0 0;
+  padding: 2rem 2.5rem;
+  border-top: 1px solid rgba(28, 37, 46, 0.08);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-size: 0.95rem;
+  color: #555f68;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+
+  .site-header nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .page {
+    padding: 0 1.5rem 2.5rem;
+  }
+
+  .panel {
+    padding: 2rem;
+  }
+}
+
+

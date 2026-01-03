@@ -1,0 +1,587 @@
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #212a3a;
+  background: #f2f4f8;
+  line-height: 1.6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f2f4f8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(242, 244, 248, 1));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.site-shell {
+  width: 100%;
+  max-width: 1024px;
+}
+
+.page {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1.5rem 0 2rem;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.brand-name {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.brand-tagline {
+  font-size: 0.85rem;
+  color: #5c677d;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  color: #5c677d;
+}
+
+.site-header nav button {
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.site-header nav button:hover,
+.site-header nav button:focus-visible {
+  color: #212a3a;
+}
+
+.site-header nav button.active {
+  color: #172034;
+  font-weight: 600;
+}
+
+.content {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  background: #fff;
+  padding: 2.4rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(20, 33, 61, 0.08);
+}
+
+.hero-copy h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.1rem, 5vw, 2.7rem);
+  color: #172034;
+}
+
+.hero-copy p {
+  margin: 0 0 1.6rem;
+  color: #4c5568;
+}
+
+.hero-actions,
+.section-actions,
+.contact-actions {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.hero-actions button,
+.section-actions button,
+.contact-actions button {
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: #2f68ff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.hero-actions button.secondary,
+.section-actions button.secondary,
+.contact-actions button.secondary {
+  background: #e8ecff;
+  color: #2f3b66;
+}
+
+.hero-actions button:hover,
+.section-actions button:hover,
+.contact-actions button:hover {
+  background: #244fcc;
+}
+
+.hero-actions button.secondary:hover,
+.section-actions button.secondary:hover,
+.contact-actions button.secondary:hover {
+  background: #d4defe;
+}
+
+.hero-board {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-panel .panel-header h2 {
+  max-width: 22ch;
+}
+
+.board-card {
+  padding: 1.3rem;
+  border-radius: 18px;
+  background: #f7f9ff;
+  border: 1px solid #dbe3ff;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.board-card .card-title {
+  font-weight: 600;
+  color: #25324a;
+}
+
+.board-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #4c5568;
+}
+
+.board-note {
+  padding: 1rem 1.2rem;
+  border-radius: 16px;
+  background: #fff5e6;
+  color: #735321;
+  font-size: 0.95rem;
+}
+
+.idea-panel {
+  background: #fff;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 22px;
+  padding: 2.4rem;
+  box-shadow: 0 16px 40px rgba(20, 33, 61, 0.06);
+}
+
+.panel-header {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1.6rem;
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #1e2b41;
+}
+
+.panel-header p {
+  margin: 0;
+  color: #53607a;
+}
+
+.idea-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.6rem;
+}
+
+.idea-grid article {
+  border: 1px solid #e2e7f0;
+  border-radius: 18px;
+  padding: 1.4rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.idea-grid article h3 {
+  margin: 0;
+  color: #1f2d44;
+  font-size: 1.15rem;
+}
+
+.idea-grid article p {
+  margin: 0;
+  color: #57627a;
+}
+
+.idea-grid article a {
+  color: #2f68ff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.steps {
+  background: #f7f9ff;
+}
+
+.steps .panel-header h2 {
+  max-width: 30ch;
+}
+
+.step-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.4rem;
+}
+
+.step-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.step-count {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #2f68ff;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.step-list h3 {
+  margin: 0;
+  color: #23304a;
+}
+
+.step-list p {
+  margin: 0.3rem 0 0;
+  color: #56637b;
+}
+
+.timeline-list {
+  gap: 1.6rem;
+}
+
+.timeline-panel {
+  background: linear-gradient(180deg, #f4f6ff, #ffffff);
+}
+
+.journey-board {
+  margin-top: 1.2rem;
+}
+
+.journeys-showcase {
+  background: #fff;
+}
+
+.journey-grid {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.journey-card {
+  border: 1px solid #e2e7f0;
+  border-radius: 18px;
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.9rem;
+  background: #fbfcff;
+}
+
+.journey-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #56637b;
+}
+
+.journey-duration {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2f68ff;
+}
+
+.journals {
+  background: #fff;
+}
+
+.journal-cards {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.journal-cards article {
+  border-radius: 18px;
+  padding: 1.4rem;
+  border: 1px solid #e4e7ef;
+  background: #fbfcff;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.journal-cards article p {
+  color: #525d75;
+}
+
+.collections-panel {
+  background: linear-gradient(180deg, #ffffff, #f6f8ff);
+}
+
+.region-highlight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+}
+
+.region-highlight article {
+  border: 1px solid #dbe3ff;
+  border-radius: 18px;
+  padding: 1.4rem;
+  background: #f7f9ff;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.region-tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #3a4b7a;
+}
+
+.collection-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.collection-card {
+  padding: 1.6rem;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid #e0e6f4;
+  display: grid;
+  gap: 0.9rem;
+  box-shadow: 0 12px 32px rgba(20, 33, 61, 0.06);
+}
+
+.collection-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #556179;
+}
+
+.highlight-grid {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.highlight-grid article {
+  padding: 1.4rem;
+  border-radius: 18px;
+  background: #f7f9ff;
+  border: 1px solid #dce3f3;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.highlight-grid article h3 {
+  margin: 0;
+  color: #1f2d44;
+}
+
+.highlight-grid article p {
+  margin: 0;
+  color: #53607a;
+}
+
+.contact-hero {
+  background: linear-gradient(180deg, #ffffff, #eef2ff);
+}
+
+.contact-actions {
+  margin-top: 1.4rem;
+}
+
+.section-actions {
+  margin-top: 1.4rem;
+}
+
+.contact-grid-panel {
+  background: #fff;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.contact-card {
+  border: 1px solid #dfe4f2;
+  border-radius: 20px;
+  padding: 1.6rem;
+  display: grid;
+  gap: 0.8rem;
+  background: #fbfcff;
+  box-shadow: 0 10px 28px rgba(20, 33, 61, 0.05);
+}
+
+.contact-card a {
+  color: #2f68ff;
+  font-weight: 600;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: #3a4864;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 12px;
+  border: 1px solid #cfd7eb;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  background: #fff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2f68ff;
+  box-shadow: 0 0 0 3px rgba(47, 104, 255, 0.15);
+}
+
+.contact-form button {
+  margin-top: 0.6rem;
+  padding: 0.65rem 1.3rem;
+  border: none;
+  border-radius: 999px;
+  background: #2f68ff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #244fcc;
+}
+
+.contact-faq {
+  background: #f7f9ff;
+}
+
+.faq-list {
+  display: grid;
+  gap: 1.3rem;
+}
+
+.faq-list article {
+  border-radius: 18px;
+  padding: 1.4rem;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(20, 33, 61, 0.05);
+  border: 1px solid #e0e7f0;
+}
+
+.faq-list article h3 {
+  margin: 0 0 0.5rem;
+  color: #22314a;
+}
+
+.faq-list article p {
+  margin: 0;
+  color: #52617c;
+}
+.journal-location {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2f3b66;
+}
+
+.site-footer {
+  margin-top: 2.5rem;
+  padding: 1.4rem 0;
+  border-top: 1px solid #d7dde8;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #5d687f;
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .site-header nav {
+    gap: 1rem;
+  }
+
+  .hero {
+    padding: 1.8rem;
+  }
+
+  .panel {
+    padding: 1.8rem;
+  }
+
+  .contact-actions {
+    justify-content: flex-start;
+  }
+}
+
