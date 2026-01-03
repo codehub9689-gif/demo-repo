@@ -6,7 +6,7 @@ function Name() {
     const {name} = useParams()
     console.log(name)
   return (
-    <div>Hi {name}</div>
+    <div>hello {name}</div>
   )
 }
 
